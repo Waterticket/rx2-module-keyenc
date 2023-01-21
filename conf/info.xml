@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module version="0.2">
+	<title xml:lang="ko">키 암호화/복보화 모듈</title>
+	<description xml:lang="ko">원하는 데이터를 암호화/복보화 합니다.</description>
+	<version>1.0.0</version>
+	<date>2023-01-21</date>
+	<category>service</category>
+	<author email_address="matthew218@naver.com" link="https://shop.hoto.dev">
+		<name xml:lang="ko">Waterticket</name>
+	</author>
+</module>
