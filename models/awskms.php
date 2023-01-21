@@ -15,6 +15,8 @@ class AWSKMS
 
     public static function getKmsClient()
     {
+		require_once './modules/keyenc/vendor/autoload.php';
+
         if(!self::$KmsClient)
         {
             self::$KmsClient = new \Aws\Kms\KmsClient([
@@ -29,11 +31,16 @@ class AWSKMS
 
     public static function EncryptShort($keyId, $message)
     {
+        if (mb_strlen($message) > 4096)
+        {
+            throw new Exception('message is too long. (max 4096 bytes)');
+        }
+
         $KmsClient = self::getKmsClient();
 
         $result = $KmsClient->encrypt([
-            'KeyId' => $keyId, 
-            'Plaintext' => $message, 
+            'KeyId' => $keyId,
+            'Plaintext' => $message,
         ]);
         
         return base64_encode($result['CiphertextBlob']);
