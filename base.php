@@ -15,6 +15,11 @@ class Base extends \ModuleObject
 	 * 모듈 설정 캐시를 위한 변수.
 	 */
 	protected static $_config_cache = null;
+
+	public function __construct()
+	{
+		require './modules/keyenc/vendor/autoload.php';
+	}
 	
 	/**
 	 * 모듈 설정을 가져오는 함수.
