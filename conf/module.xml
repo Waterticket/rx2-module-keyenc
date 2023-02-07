@@ -4,8 +4,8 @@
 	</grants>
 	<actions>
 		<!-- 관리자 액션 -->
-		<action name="dispKeyencAdminConfig" class="Controllers\Admin" menu_name="keyenc" admin_index="true" />
-		<action name="procKeyencAdminInsertConfig" class="Controllers\Admin" />
+		<!-- <action name="dispKeyencAdminConfig" class="Controllers\Admin" menu_name="keyenc" admin_index="true" />
+		<action name="procKeyencAdminInsertConfig" class="Controllers\Admin" /> -->
 	</actions>
 	<menus>
 		<menu name="keyenc" type="all">
